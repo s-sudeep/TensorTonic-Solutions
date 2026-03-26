@@ -4,7 +4,7 @@ def word_count_dict(sentences):
     """
     # Your code here
     count = {}
-    if sentences is []:
+    if not sentences:
         return {}
     for i in sentences:
         for j in i:
