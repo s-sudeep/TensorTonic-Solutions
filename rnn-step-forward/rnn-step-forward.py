@@ -5,5 +5,5 @@ def rnn_step_forward(x_t, h_prev, Wx, Wh, b):
     Returns: h_t of shape (H,)
     """
     # Write code here
-    h_t = np.tanh(x_t @ Wx + h_prev @ Wh + b)
-    return h_t
+    x_t, h_prev, b = np.array(x_t), np.array(h_prev), np.array(b)
+    return np.tanh(x_t @ Wx + h_prev @ Wh + b)
