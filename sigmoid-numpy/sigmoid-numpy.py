@@ -5,5 +5,5 @@ def sigmoid(x):
     Vectorized sigmoid function.
     """
     # Write code here
-    return 1/(1+ np.exp(-(np.array(x, float))))
-        
+    x = np.array(x)
+    return 1 / (1 + np.exp(-1*x))
