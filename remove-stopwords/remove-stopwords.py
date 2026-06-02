@@ -3,5 +3,5 @@ def remove_stopwords(tokens, stopwords):
     Returns: list[str] - tokens with stopwords removed (preserve order)
     """
     # Your code here
-    stop = set(stopwords)
-    return [i for i in tokens if i not in stop]
+    res = [i for i in tokens if i not in stopwords]
+    return res
