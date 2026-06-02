@@ -4,10 +4,10 @@ def bag_of_words_vector(tokens, vocab):
     """
     Returns: np.ndarray of shape (len(vocab),), dtype=int
     """
-    # Your code here
-    counter = {}
+    vocabulary = {word:idx for idx, word in enumerate(vocab)}
+    out = np.zeros(len(vocab), dtype=int)
     for i in tokens:
-        counter[i] = counter.get(i,0) + 1 if i in vocab else 0
-
-    vector_list = [counter.get(word, 0) for word in vocab]
-    return np.array(vector_list, dtype=int)
+        if i in vocabulary:
+            idx = vocabulary[i]
+            out[idx]+=1
+    return out
